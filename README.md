@@ -10,5 +10,8 @@ Processing combined FASTQ files:
     consolidate.py
     demultiplex.py
 ```
-auxillary scripts:
+auxillary scripts and files needed to run above scripts:
+```
+    antat_primers.fasta
+```
     
