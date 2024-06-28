@@ -5,6 +5,7 @@ Processing combined FASTQ files:
 ```
     index_addition.py
     sort_reads_primer.py
+        antat_primers.fasta
     qual_trim.py
     trim_spacers.py
     consolidate.py
