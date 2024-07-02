@@ -1,9 +1,22 @@
 # Smith2024
 mosaic-vsg-scripts
 
+packages required:
+cutadapt v3.6
+trim_galore
+
+python packages required:
+```
+    os
+    glob
+    shutil
+    Bio.SeqIO.QualityIO
+```
+
 Processing combined FASTQ files:
 ```
     index_addition.py
+        global_target.py
     primer_sort.py
         antat_primers.fasta
     trim.py
