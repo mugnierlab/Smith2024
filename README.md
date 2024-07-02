@@ -4,7 +4,7 @@ mosaic-vsg-scripts
 Processing combined FASTQ files:
 ```
     index_addition.py
-    sort_reads_primer.py
+    primer_sort.py
         antat_primers.fasta
     trim.py
         antat_primers.txt
