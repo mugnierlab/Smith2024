@@ -16,6 +16,8 @@ python packages required:
     itertools
     more_itertools
     csv
+    contextlib
+    pandas
     Bio.SeqIO.QualityIO
     Levenshtein
 ```
