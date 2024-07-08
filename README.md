@@ -1,6 +1,9 @@
 # Smith2024
 mosaic-vsg-scripts
 
+VSG-AMP-Seq:
+
+1) Raw FASTQ processing
 packages required:
 ```
 cutadapt v3.6
@@ -44,5 +47,22 @@ auxillary scripts and files needed to run above scripts:
     <samples>_barcodes.txt
         a file with barcodes specific for your experiment
     aux_functions.py
+```
+
+2) mosaic identification
+
+python packages required:
+```
+    Levenshtein
+    regex
+```
+Python executables:
+```
+    identify_mosaics.py
+```
+ auxillary scripts and files needed to run above scripts:
+```
+    aux_functions.py
+    global_target.py
 ```
     
