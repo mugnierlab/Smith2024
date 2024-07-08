@@ -34,6 +34,7 @@ Processing combined FASTQ files:
         consol_supplement.py
     demultiplex.py
         <samples>_barcodes.txt
+        if error because too many files are open, run: ```ulimit -n <num of files to open>``` 
 ```
 auxillary scripts and files needed to run above scripts:
 ```
