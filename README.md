@@ -75,6 +75,21 @@ Python executables:
 ```
 3) Visualization functions
 
+Packages required:
+```    
+    bowtie
+```
+
+Python packages required:
+```
+    os
+    glob
+```
+Python executables:
+```
+    quant_R1s_bowtie.py
+```
+
 R packages required:
 ```
     tidyverse
