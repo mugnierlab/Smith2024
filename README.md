@@ -63,6 +63,7 @@ python packages required:
 ```
 Python executables:
 ```
+    genome_sort_by_primer.py
     vsg_align.py
     identify_mosaics.py
 ```
