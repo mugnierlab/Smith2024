@@ -53,15 +53,22 @@ auxillary scripts and files needed to run above scripts:
 
 python packages required:
 ```
+    glob
+    os
+    csv
+    contextlib
+    Bio.SeqIO.QualityIO
     Levenshtein
     regex
 ```
 Python executables:
 ```
+    vsg_align.py
     identify_mosaics.py
 ```
  auxillary scripts and files needed to run above scripts:
 ```
+    vsg_align_supplement.py
     aux_functions.py
     global_target.py
 ```
