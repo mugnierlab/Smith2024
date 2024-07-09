@@ -1,4 +1,7 @@
-"""AMP-Seq: This set of functions aligns reads to target VSG and identifies mosaic VSG reads"""
+"""AMP-Seq: This set of functions aligns reads to target VSG and identifies mosaic VSG reads candidates
+   Smith 2024
+   Author: Jaclyn Smith
+"""
 import glob
 import os
 import csv
