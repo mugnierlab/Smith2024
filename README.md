@@ -73,4 +73,14 @@ Python executables:
     aux_functions.py
     global_target.py
 ```
-    
+3) Visualization functions
+
+R packages required:
+```
+    tidyverse
+    qPCRr - by Jaclyn Smith
+```
+R executables:
+```
+    mosaic_graphing_functions.R
+```
