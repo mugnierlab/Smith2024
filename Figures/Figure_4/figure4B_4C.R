@@ -1,5 +1,5 @@
 # Figure 4 B + C
-# DNA double stranded breaks trigger mosaic VSG formation if homology is available
+# Donor VSGs are accessible throughout the genome
 # Smith 2024
 
 # read in data
