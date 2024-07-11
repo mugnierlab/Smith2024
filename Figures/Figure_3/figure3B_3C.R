@@ -1,5 +1,5 @@
 # Figure 3 B + C
-# DNA double stranded breaks trigger mosaic VSG formation if homology is available
+# Nucleotide changes observed in mosaic VSGs arise from templated insertions
 # Smith 2024
 
 # read in and clean data, modified version of data read in to deal with alt donors available
