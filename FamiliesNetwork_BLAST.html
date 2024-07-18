@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Author" content="Jaime So">
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px 'Helvetica Neue'; color: #212f3f; -webkit-text-stroke: #212f3f; min-height: 18.0px}
+    p.p5 {margin: 0.0px 0.0px 10.5px 0.0px; font: 15.0px 'Helvetica Neue'; color: #212f3f; -webkit-text-stroke: #212f3f}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px 'Helvetica Neue'; color: #212f3f; -webkit-text-stroke: #212f3f}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Courier; color: #687778; -webkit-text-stroke: #687778; background-color: #e7eced}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Courier; color: #687778; -webkit-text-stroke: #687778; background-color: #e7eced; min-height: 17.0px}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Courier; color: #687778; -webkit-text-stroke: #687778; background-color: #ffffff}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #687778; -webkit-text-stroke: #687778; background-color: #ffffff}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px 'Helvetica Neue'; color: #6d6d6d; -webkit-text-stroke: #6d6d6d; min-height: 18.0px}
+    p.p14 {margin: 0.0px 0.0px 10.5px 0.0px; text-align: center; font: 15.0px 'Helvetica Neue'; color: #1fb18a; -webkit-text-stroke: #1fb18a}
+    p.p15 {margin: 0.0px 0.0px 10.5px 0.0px; text-align: center; font: 15.0px 'Helvetica Neue'; color: #6d6d6d; -webkit-text-stroke: #6d6d6d}
+    p.p16 {margin: 0.0px 0.0px 10.5px 0.0px; text-align: center; font: 15.0px 'Helvetica Neue'; color: #212f3f; -webkit-text-stroke: #212f3f; min-height: 18.0px}
+    li.li6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.0px 'Helvetica Neue'; color: #212f3f; -webkit-text-stroke: #212f3f}
+    span.s1 {font-kerning: none}
+    span.s2 {-webkit-text-stroke: 0px #000000}
+    span.s3 {font: 14.0px Courier; font-kerning: none}
+    span.s4 {font: 14.0px 'Apple Symbols'; font-kerning: none}
+    span.s5 {font-kerning: none; color: #212f3f; -webkit-text-stroke: 0px #212f3f}
+    span.s6 {font-kerning: none; color: #1fb18a; -webkit-text-stroke: 0px #1fb18a}
+    ol.ol1 {list-style-type: decimal}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1"></span><br></p>
+<h1 style="margin: 0.0px 0.0px 10.5px 0.0px; font: 38.0px 'Helvetica Neue'; color: #212f3f; -webkit-text-stroke: #212f3f"><span class="s1">VSGenome Network</span></h1>
+<h4 style="margin: 0.0px 0.0px 10.5px 0.0px; font: 18.0px 'Helvetica Neue'; color: #212f3f; -webkit-text-stroke: #212f3f"><span class="s1">Jaime So</span></h4>
+<h4 style="margin: 0.0px 0.0px 10.5px 0.0px; font: 18.0px 'Helvetica Neue'; color: #212f3f; -webkit-text-stroke: #212f3f"><span class="s1">2024-06-20</span></h4>
+<h1 style="margin: 0.0px 0.0px 10.5px 0.0px; font: 34.0px 'Helvetica Neue'; color: #212f3f; -webkit-text-stroke: #212f3f"><span class="s1">Network Clustering of Lister427 and EATRO1125 VSG repertoires</span></h1>
+<p class="p5"><span class="s1">We have 3 VSGenomes to test:</span></p>
+<ol class="ol1">
+  <li class="li6"><span class="s2"></span><span class="s1">EATRO VSGnome</span></li>
+  <li class="li6"><span class="s2"></span><span class="s1">Lister VSGnome with george’s seqs and 2018 genome extras</span></li>
+  <li class="li6"><span class="s2"></span><span class="s1">Lister VSGs only found in the 2018 genome</span></li>
+</ol>
+<h2 style="margin: 0.0px 0.0px 10.5px 0.0px; font: 30.0px 'Helvetica Neue'; color: #212f3f; -webkit-text-stroke: #212f3f"><span class="s1">Perform all v. all blastn to Generate Edgelist</span></h2>
+<p class="p5"><span class="s1">Blastn performed using default parameters. Input Fasta files contain full VSG and pseudogene coding sequences. large blast output can be subset later to find connections of interest. Specify csv output and report query/subject original length, alignment length, expect value, and percent identity. Aishwarya used cdhit followed by heirarchical fasttree clustering to define families. cd-hit works by perfroming alignment, finding the longest representative seqeunce, clustering others similar to the representative by a percent identity threshold.</span></p>
+<p class="p5"><span class="s1">Blastn will report smaller sequences of high identity between the subject and query. These hits are not as important for Jaclyn’s family classification as they often contain uninformative sections, such as C-terminal sequence which is highly conserved among all VSG. The sets of mosaic donors observed experimentally exhibit high sequence homology along the full length of the VSG. I plan to filter the edgelist for blastn hits with high query coverage.</span></p>
+<p class="p8"><span class="s1"># make blastdb</span></p>
+<p class="p8"><span class="s1">% makeblastdb -in &lt;input_file.fa&gt; -out &lt;output_file&gt; -parse_seqids -dbtype nucl</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1"># do blastn</span></p>
+<p class="p8"><span class="s1">% blastn -db &lt;blast_database&gt; -query &lt;input_file.fa&gt; -out &lt;output_file.csv&gt; -outfmt "10 qseqid sseqid qlen slen length evalue pident"</span></p>
+<h2 style="margin: 0.0px 0.0px 10.5px 0.0px; font: 30.0px 'Helvetica Neue'; color: #212f3f; -webkit-text-stroke: #212f3f"><span class="s1">Write a function to perform network analysis and clustering of BLASTn results</span></h2>
+<p class="p5"><span class="s1">Filter hits by e-value and alignment coverage. Use igraph to generate a network plot where edges are drawn between nodes (VSG proteins) that share similarity that meets our specified thresholds. Cluster nodes using the leading eigen algorithm to define families. Remove “isolated” nodes from igraph object to aid in clustering, but save in output dataframe as these are the unique VSG which cannot be grouped into a family.</span></p>
+<h3 style="margin: 0.0px 0.0px 10.5px 0.0px; font: 24.0px 'Helvetica Neue'; color: #212f3f; -webkit-text-stroke: #212f3f"><span class="s1">net_analyze() funtion performs igraph network clustering analysis</span></h3>
+<p class="p5"><span class="s1">outputs a dataframe containing each VSG name, the cluster name (or unique if the node was isolated), the degree (or number) of edges that connect to each VSG, and the number of other VSG in the same cluster.</span></p>
+<ol class="ol1">
+  <li class="li6"><span class="s2"></span><span class="s1">links = dataframe of blastn results</span></li>
+  <li class="li6"><span class="s2"></span><span class="s1">cutoff = desired expect value cutoff for drawing edges</span></li>
+  <li class="li6"><span class="s2"></span><span class="s1">covergae = desired alignment coverage of the query sequence</span></li>
+</ol>
+<p class="p8"><span class="s1">net_analyze &lt;- function(links, cutoff, coverage){</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>nodeslist &lt;- unique(links$from)</span></p>
+<p class="p8"><span class="s1"># remove sequences that map to themselves <span class="Apple-converted-space"> </span></span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>links &lt;- links %&gt;% filter(!(from == to))</span></p>
+<p class="p8"><span class="s1"># impose evalue and alignment length cutoff</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>links &lt;- filter(links, evalue &lt;= cutoff &amp; cov &gt;= coverage)</span></p>
+<p class="p8"><span class="s1"># create igraph objects</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>nets &lt;- graph_from_data_frame(d=links, vertices=nodeslist, directed=F)</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>simple &lt;- igraph::simplify(nets, remove.multiple = T, remove.loops = T)</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>isolated &lt;- which(degree(simple)==0)<span class="Apple-converted-space"> </span></span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>simple &lt;- delete_vertices(simple, isolated)</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>df_degree &lt;- degree(simple) %&gt;% as.data.frame()<span class="Apple-converted-space"> </span></span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>colnames(df_degree) &lt;- "degree"</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>df_degree &lt;- df_degree %&gt;% mutate(VSG = rownames(.))</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>df_degree &lt;- rbind(df_degree, data.frame(VSG<span class="Apple-converted-space">  </span>= names(isolated),</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                                           </span>degree= rep(0, length(isolated))))</span></p>
+<p class="p8"><span class="s1"># then establish which communities each VSG belongs to</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>cluster &lt;- cluster_leading_eigen(simple)</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>df_com &lt;- cluster$membership</span></p>
+<p class="p8"><span class="s1"># extract seq ID from the network plot dataframe</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>cdf &lt;- as_ids(V(simple))</span></p>
+<p class="p8"><span class="s1"># each of these can be the column of the dataframe</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>df &lt;- data.frame(cdf,df_com)</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>colnames(df) &lt;- c("VSG", "cluster")</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>df &lt;- rbind(df, data.frame(VSG<span class="Apple-converted-space">  </span>= names(isolated),</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                             </span>cluster = rep("unique", length(isolated))))</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>df &lt;- inner_join(df, df_degree, by = "VSG")</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>df &lt;- df %&gt;% group_by(cluster) %&gt;% mutate(n = length(VSG)) %&gt;%</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">    </span>ungroup()</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">  </span>return(df)</span></p>
+<p class="p8"><span class="s1">}</span></p>
+<h1 style="margin: 0.0px 0.0px 10.5px 0.0px; font: 34.0px 'Helvetica Neue'; color: #212f3f; -webkit-text-stroke: #212f3f"><span class="s1">EATRO_vsgs_long_unique.fa</span></h1>
+<p class="p8"><span class="s1">% makeblastdb -in EATRO_vsgs_long_unique.fa -out EATRO_vsgs -parse_seqids -dbtype nucl</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1">Building a new DB, current time: 06/20/2024 11:19:55</span></p>
+<p class="p8"><span class="s1">New DB name: <span class="Apple-converted-space">  </span>/Users/jaimeso/Desktop/PhD-MugnierLab/Experiments/helpJaclyn/EATRO_vsgs</span></p>
+<p class="p8"><span class="s1">New DB title:<span class="Apple-converted-space">  </span>EATRO_vsgs_long_unique.fa</span></p>
+<p class="p8"><span class="s1">Sequence type: Nucleotide</span></p>
+<p class="p8"><span class="s1">Keep MBits: T</span></p>
+<p class="p8"><span class="s1">Maximum file size: 1000000000B</span></p>
+<p class="p8"><span class="s1">Adding sequences from FASTA; added 5268 sequences in 0.151069 seconds.</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1">% blastn -db EATRO_vsgs -query EATRO_vsgs_long_unique.fa -out EATRO_vsgs_network_blastn.csv -outfmt "10 qseqid sseqid qlen slen length evalue pident"</span></p>
+<p class="p8"><span class="s1">EATRO_links &lt;- read_csv("EATRO_vsgs_network_blastn.csv", col_names = F)</span></p>
+<p class="p11"><span class="s1">## Rows: 128584 Columns: 7</span></p>
+<p class="p12"><span class="s3">## </span><span class="s1">──</span><span class="s3"> Column specification </span><span class="s1">────────────────────────────────────────────────────────</span></p>
+<p class="p11"><span class="s1">## Delimiter: ","</span></p>
+<p class="p11"><span class="s1">## chr (2): X1, X2</span></p>
+<p class="p11"><span class="s1">## dbl (5): X3, X4, X5, X6, X7</span></p>
+<p class="p11"><span class="s1">##<span class="Apple-converted-space"> </span></span></p>
+<p class="p11"><span class="s1">## </span><span class="s4">ℹ</span><span class="s1"> Use `spec()` to retrieve the full column specification for this data.</span></p>
+<p class="p11"><span class="s1">## </span><span class="s4">ℹ</span><span class="s1"> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></p>
+<p class="p8"><span class="s1">colnames(EATRO_links) &lt;- c("from", "to", "query_length", "subject_length", "align_length", "evalue", "pident")</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1"># we want to filter dataframe for alignments that cover a large proportion of the original sequence, add this to the results</span></p>
+<p class="p8"><span class="s1">EATRO_links &lt;- EATRO_links %&gt;% mutate(cov = align_length / query_length)</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1"># stringent evalue and alignment coverage &gt; 80%</span></p>
+<p class="p8"><span class="s1">EATRO_cutoff1 &lt;- net_analyze(EATRO_links, 1e-20, 0.8)</span></p>
+<p class="p8"><span class="s1">EATRO_cutoff1 %&gt;% filter(grepl("Antat", VSG))</span></p>
+<p class="p11"><span class="s1">## # A tibble: 1 × 4</span></p>
+<p class="p11"><span class="s1">## <span class="Apple-converted-space">  </span>VSG<span class="Apple-converted-space">              </span>cluster degree <span class="Apple-converted-space">    </span>n</span></p>
+<p class="p11"><span class="s1">## <span class="Apple-converted-space">  </span>&lt;chr&gt;<span class="Apple-converted-space">            </span>&lt;chr&gt;<span class="Apple-converted-space">    </span>&lt;dbl&gt; &lt;int&gt;</span></p>
+<p class="p11"><span class="s1">## 1 Tbb1125VSG-Antat 114<span class="Apple-converted-space">          </span>4 <span class="Apple-converted-space">    </span>6</span></p>
+<p class="p8"><span class="s1">EATRO_cutoff1 %&gt;% filter(cluster == "114")</span></p>
+<p class="p11"><span class="s1">## # A tibble: 6 × 4</span></p>
+<p class="p11"><span class="s1">## <span class="Apple-converted-space">  </span>VSG<span class="Apple-converted-space">              </span>cluster degree <span class="Apple-converted-space">    </span>n</span></p>
+<p class="p11"><span class="s1">## <span class="Apple-converted-space">  </span>&lt;chr&gt;<span class="Apple-converted-space">            </span>&lt;chr&gt;<span class="Apple-converted-space">    </span>&lt;dbl&gt; &lt;int&gt;</span></p>
+<p class="p11"><span class="s1">## 1 Tbb1125VSG-228 <span class="Apple-converted-space">  </span>114<span class="Apple-converted-space">          </span>4 <span class="Apple-converted-space">    </span>6</span></p>
+<p class="p11"><span class="s1">## 2 Tbb1125VSG-2986<span class="Apple-converted-space">  </span>114<span class="Apple-converted-space">          </span>3 <span class="Apple-converted-space">    </span>6</span></p>
+<p class="p11"><span class="s1">## 3 Tbb1125VSG-3110<span class="Apple-converted-space">  </span>114<span class="Apple-converted-space">          </span>4 <span class="Apple-converted-space">    </span>6</span></p>
+<p class="p11"><span class="s1">## 4 Tbb1125VSG-4156<span class="Apple-converted-space">  </span>114<span class="Apple-converted-space">          </span>4 <span class="Apple-converted-space">    </span>6</span></p>
+<p class="p11"><span class="s1">## 5 Tbb1125VSG-7358<span class="Apple-converted-space">  </span>114<span class="Apple-converted-space">          </span>1 <span class="Apple-converted-space">    </span>6</span></p>
+<p class="p11"><span class="s1">## 6 Tbb1125VSG-Antat 114<span class="Apple-converted-space">          </span>4 <span class="Apple-converted-space">    </span>6</span></p>
+<p class="p8"><span class="s1"># the proportion of unique VSG that were not grouped into a family</span></p>
+<p class="p8"><span class="s1">EATRO_cutoff1 %&gt;% filter(cluster == "unique") %&gt;% nrow() / nrow(EATRO_cutoff1)</span></p>
+<p class="p11"><span class="s1">## [1] 0.1900152</span></p>
+<p class="p8"><span class="s1"># how many families are there?</span></p>
+<p class="p8"><span class="s1">unique(EATRO_cutoff1$cluster) %&gt;% tail()</span></p>
+<p class="p11"><span class="s1">## [1] "989"<span class="Apple-converted-space">    </span>"990"<span class="Apple-converted-space">    </span>"991"<span class="Apple-converted-space">    </span>"992"<span class="Apple-converted-space">    </span>"993"<span class="Apple-converted-space">    </span>"unique"</span></p>
+<p class="p8"><span class="s1"># There are 993 VSG families in EATRO1125</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1"># range of family sizes</span></p>
+<p class="p8"><span class="s1">summary(EATRO_cutoff1[EATRO_cutoff1$cluster != "unique", ] %&gt;% select(cluster, n) %&gt;% distinct() %&gt;% .$n)</span></p>
+<p class="p11"><span class="s1">##<span class="Apple-converted-space">    </span>Min. 1st Qu.<span class="Apple-converted-space">  </span>Median<span class="Apple-converted-space">    </span>Mean 3rd Qu.<span class="Apple-converted-space">    </span>Max.<span class="Apple-converted-space"> </span></span></p>
+<p class="p11"><span class="s1">## <span class="Apple-converted-space">  </span>2.000 <span class="Apple-converted-space">  </span>2.000 <span class="Apple-converted-space">  </span>3.000 <span class="Apple-converted-space">  </span>4.297 <span class="Apple-converted-space">  </span>5.000<span class="Apple-converted-space">  </span>29.000</span></p>
+<p class="p8"><span class="s1"># write clustering output to a csv file</span></p>
+<p class="p8"><span class="s1">#write_csv(EATRO_cutoff1, file = "EATRO_families.csv")</span></p>
+<p class="p5"><span class="s1">These parameters perfectly replicated Jaclyn’s defined family for Antat. The proportion of unique VSG is larger than the 15% Jaclyn calculated, at 19% instead.</span></p>
+<h1 style="margin: 0.0px 0.0px 10.5px 0.0px; font: 34.0px 'Helvetica Neue'; color: #212f3f; -webkit-text-stroke: #212f3f"><span class="s1">all_unique_posDuplicate_Lister427VSGs_AnTat.fa</span></h1>
+<p class="p5"><span class="s1">The gene IDs in this fasta file are too long and BLASTn will not use them as input. shorten them and rewrite the fasta file</span></p>
+<p class="p8"><span class="s1">ListerFasta &lt;- readDNAStringSet(filepath = "all_unique_posDuplicate_Lister427VSGs_AnTat.fa")</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1">fastanames &lt;- data.frame(oldname = names(ListerFasta))</span></p>
+<p class="p8"><span class="s1">fastanames$int &lt;- str_split_fixed(fastanames$oldname, ";", n = 2)[, 1]<span class="Apple-converted-space"> </span></span></p>
+<p class="p8"><span class="s1">fastanames$newname &lt;- case_when(grepl("ID=", fastanames$int) ~ str_split_fixed(fastanames$int, "ID=", n = 2)[, 2],</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span>TRUE ~ fastanames$int)</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1">names(ListerFasta) &lt;- fastanames$newname</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1">#writeXStringSet(ListerFasta, filepath = "all_unique_posDuplicate_Lister427VSGs_AnTat_renamed.fa")</span></p>
+<p class="p8"><span class="s1">% makeblastdb -in all_unique_posDuplicate_Lister427VSGs_AnTat_renamed.fa -out Lister427VSGs_AnTat -parse_seqids -dbtype nucl</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1">Building a new DB, current time: 06/21/2024 15:28:52</span></p>
+<p class="p8"><span class="s1">New DB name: <span class="Apple-converted-space">  </span>/Users/jaimeso/Desktop/PhD-MugnierLab/Experiments/helpJaclyn/Lister427VSGs_AnTat</span></p>
+<p class="p8"><span class="s1">New DB title:<span class="Apple-converted-space">  </span>all_unique_posDuplicate_Lister427VSGs_AnTat_renamed.fa</span></p>
+<p class="p8"><span class="s1">Sequence type: Nucleotide</span></p>
+<p class="p8"><span class="s1">Keep MBits: T</span></p>
+<p class="p8"><span class="s1">Maximum file size: 1000000000B</span></p>
+<p class="p8"><span class="s1">Adding sequences from FASTA; added 8442 sequences in 0.226577 seconds.</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1">% blastn -db Lister427VSGs_AnTat -query all_unique_posDuplicate_Lister427VSGs_AnTat_renamed.fa -out all_unique_posDuplicate_Lister427VSGs_AnTat_network_blastn.csv -outfmt "10 qseqid sseqid qlen slen length evalue pident"</span></p>
+<p class="p8"><span class="s1">Lister_links &lt;- read_csv("all_unique_posDuplicate_Lister427VSGs_AnTat_network_blastn.csv", col_names = F)</span></p>
+<p class="p11"><span class="s1">## Rows: 415096 Columns: 7</span></p>
+<p class="p12"><span class="s3">## </span><span class="s1">──</span><span class="s3"> Column specification </span><span class="s1">────────────────────────────────────────────────────────</span></p>
+<p class="p11"><span class="s1">## Delimiter: ","</span></p>
+<p class="p11"><span class="s1">## chr (2): X1, X2</span></p>
+<p class="p11"><span class="s1">## dbl (5): X3, X4, X5, X6, X7</span></p>
+<p class="p11"><span class="s1">##<span class="Apple-converted-space"> </span></span></p>
+<p class="p11"><span class="s1">## </span><span class="s4">ℹ</span><span class="s1"> Use `spec()` to retrieve the full column specification for this data.</span></p>
+<p class="p11"><span class="s1">## </span><span class="s4">ℹ</span><span class="s1"> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></p>
+<p class="p8"><span class="s1">colnames(Lister_links) &lt;- c("from", "to", "query_length", "subject_length", "align_length", "evalue", "pident")</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1"># we want to filter dataframe for alignments that cover a large proportion of the original sequence, add this to the results</span></p>
+<p class="p8"><span class="s1">Lister_links &lt;- Lister_links %&gt;% mutate(cov = align_length / query_length)</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1"># stringent evalue and alignment coverage &gt; 80%</span></p>
+<p class="p8"><span class="s1">Lister_cutoff1 &lt;- net_analyze(Lister_links, 1e-20, 0.8)</span></p>
+<p class="p8"><span class="s1">Lister_cutoff1 %&gt;% filter(grepl("Antat", VSG))</span></p>
+<p class="p11"><span class="s1">## # A tibble: 1 × 4</span></p>
+<p class="p11"><span class="s1">## <span class="Apple-converted-space">  </span>VSG<span class="Apple-converted-space">              </span>cluster degree <span class="Apple-converted-space">    </span>n</span></p>
+<p class="p11"><span class="s1">## <span class="Apple-converted-space">  </span>&lt;chr&gt;<span class="Apple-converted-space">            </span>&lt;chr&gt;<span class="Apple-converted-space">    </span>&lt;dbl&gt; &lt;int&gt;</span></p>
+<p class="p11"><span class="s1">## 1 Tbb1125VSG-Antat 35 <span class="Apple-converted-space">          </span>4 <span class="Apple-converted-space">    </span>7</span></p>
+<p class="p8"><span class="s1">Lister_cutoff1 %&gt;% filter(cluster == "35")</span></p>
+<p class="p11"><span class="s1">## # A tibble: 7 × 4</span></p>
+<p class="p11"><span class="s1">## <span class="Apple-converted-space">  </span>VSG<span class="Apple-converted-space">                        </span>cluster degree <span class="Apple-converted-space">    </span>n</span></p>
+<p class="p11"><span class="s1">## <span class="Apple-converted-space">  </span>&lt;chr&gt;<span class="Apple-converted-space">                      </span>&lt;chr&gt;<span class="Apple-converted-space">    </span>&lt;dbl&gt; &lt;int&gt;</span></p>
+<p class="p11"><span class="s1">## 1 Tb427_000032900<span class="Apple-converted-space">            </span>35 <span class="Apple-converted-space">          </span>3 <span class="Apple-converted-space">    </span>7</span></p>
+<p class="p11"><span class="s1">## 2 Tb427_000143700<span class="Apple-converted-space">            </span>35 <span class="Apple-converted-space">          </span>6 <span class="Apple-converted-space">    </span>7</span></p>
+<p class="p11"><span class="s1">## 3 Tb427_000362300:pseudogene 35 <span class="Apple-converted-space">          </span>6 <span class="Apple-converted-space">    </span>7</span></p>
+<p class="p11"><span class="s1">## 4 Tb427_000787800:pseudogene 35 <span class="Apple-converted-space">          </span>6 <span class="Apple-converted-space">    </span>7</span></p>
+<p class="p11"><span class="s1">## 5 Tb427_000236600:pseudogene 35 <span class="Apple-converted-space">          </span>5 <span class="Apple-converted-space">    </span>7</span></p>
+<p class="p11"><span class="s1">## 6 Tb427VSG-7561<span class="Apple-converted-space">              </span>35 <span class="Apple-converted-space">          </span>4 <span class="Apple-converted-space">    </span>7</span></p>
+<p class="p11"><span class="s1">## 7 Tbb1125VSG-Antat <span class="Apple-converted-space">          </span>35 <span class="Apple-converted-space">          </span>4 <span class="Apple-converted-space">    </span>7</span></p>
+<p class="p8"><span class="s1"># the proportion of unique VSG that were not grouped into a family</span></p>
+<p class="p8"><span class="s1">Lister_cutoff1 %&gt;% filter(cluster == "unique") %&gt;% nrow() / nrow(Lister_cutoff1)</span></p>
+<p class="p11"><span class="s1">## [1] 0.09026297</span></p>
+<p class="p8"><span class="s1"># how many families are there?</span></p>
+<p class="p8"><span class="s1">unique(Lister_cutoff1$cluster) %&gt;% tail()</span></p>
+<p class="p11"><span class="s1">## [1] "1167" <span class="Apple-converted-space">  </span>"1168" <span class="Apple-converted-space">  </span>"1169" <span class="Apple-converted-space">  </span>"1170" <span class="Apple-converted-space">  </span>"1171" <span class="Apple-converted-space">  </span>"unique"</span></p>
+<p class="p8"><span class="s1"># There are 1171 VSG families in this Lister repertoire</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1"># range of family sizes</span></p>
+<p class="p8"><span class="s1">summary(Lister_cutoff1[Lister_cutoff1$cluster != "unique", ] %&gt;% select(cluster, n) %&gt;% distinct() %&gt;% .$n)</span></p>
+<p class="p11"><span class="s1">##<span class="Apple-converted-space">    </span>Min. 1st Qu.<span class="Apple-converted-space">  </span>Median<span class="Apple-converted-space">    </span>Mean 3rd Qu.<span class="Apple-converted-space">    </span>Max.<span class="Apple-converted-space"> </span></span></p>
+<p class="p11"><span class="s1">## <span class="Apple-converted-space">  </span>2.000 <span class="Apple-converted-space">  </span>3.000 <span class="Apple-converted-space">  </span>4.000 <span class="Apple-converted-space">  </span>6.542 <span class="Apple-converted-space">  </span>7.000 200.000</span></p>
+<p class="p8"><span class="s1"># write clustering output to a csv file</span></p>
+<p class="p8"><span class="s1">#write_csv(Lister_cutoff1, file = "Lister_families.csv")</span></p>
+<p class="p5"><span class="s1">Once again, this network analysis perfectly replicated Jaclyn’s defined family for Antat within the Lister repertoire. The proportion of unique VSGs for this VSGenome that are without families is less than for EATRO (9% in Lister v. 19% in EATRO).</span></p>
+<h1 style="margin: 0.0px 0.0px 10.5px 0.0px; font: 34.0px 'Helvetica Neue'; color: #212f3f; -webkit-text-stroke: #212f3f"><span class="s1">all_unique_posDuplicate_Lister427VSGsonly_AnTat.fa</span></h1>
+<p class="p8"><span class="s1">ListerOnlyFasta &lt;- readDNAStringSet(filepath = "all_unique_posDuplicate_Lister427VSGsonly_AnTat.fa")</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1">fastanames &lt;- data.frame(oldname = names(ListerOnlyFasta))</span></p>
+<p class="p8"><span class="s1">fastanames$int &lt;- str_split_fixed(fastanames$oldname, ";", n = 2)[, 1]<span class="Apple-converted-space"> </span></span></p>
+<p class="p8"><span class="s1">fastanames$newname &lt;- case_when(grepl("ID=", fastanames$int) ~ str_split_fixed(fastanames$int, "ID=", n = 2)[, 2],</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span>TRUE ~ fastanames$int)</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1">names(ListerOnlyFasta) &lt;- fastanames$newname</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1">writeXStringSet(ListerOnlyFasta, filepath = "all_unique_posDuplicate_Lister427VSGsonly_AnTat_renamed.fa")</span></p>
+<p class="p8"><span class="s1">% makeblastdb -in all_unique_posDuplicate_Lister427VSGsonly_AnTat_renamed.fa -out Lister427VSGsOnly_AnTat -parse_seqids -dbtype nucl</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1">Building a new DB, current time: 06/21/2024 17:15:28</span></p>
+<p class="p8"><span class="s1">New DB name: <span class="Apple-converted-space">  </span>/Users/jaimeso/Desktop/PhD-MugnierLab/Experiments/helpJaclyn/Lister427VSGsOnly_AnTat</span></p>
+<p class="p8"><span class="s1">New DB title:<span class="Apple-converted-space">  </span>all_unique_posDuplicate_Lister427VSGsonly_AnTat_renamed.fa</span></p>
+<p class="p8"><span class="s1">Sequence type: Nucleotide</span></p>
+<p class="p8"><span class="s1">Keep MBits: T</span></p>
+<p class="p8"><span class="s1">Maximum file size: 1000000000B</span></p>
+<p class="p8"><span class="s1">Adding sequences from FASTA; added 5667 sequences in 0.205554 seconds.</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1">% blastn -db Lister427VSGsOnly_AnTat -query all_unique_posDuplicate_Lister427VSGsonly_AnTat_renamed.fa -out all_unique_posDuplicate_Lister427VSGsonly_AnTat_AnTat_network_blastn.csv -outfmt "10 qseqid sseqid qlen slen length evalue pident"</span></p>
+<p class="p8"><span class="s1">ListerOnly_links &lt;- read_csv("all_unique_posDuplicate_Lister427VSGsonly_AnTat_AnTat_network_blastn.csv", col_names = F)</span></p>
+<p class="p11"><span class="s1">## Rows: 290298 Columns: 7</span></p>
+<p class="p12"><span class="s3">## </span><span class="s1">──</span><span class="s3"> Column specification </span><span class="s1">────────────────────────────────────────────────────────</span></p>
+<p class="p11"><span class="s1">## Delimiter: ","</span></p>
+<p class="p11"><span class="s1">## chr (2): X1, X2</span></p>
+<p class="p11"><span class="s1">## dbl (5): X3, X4, X5, X6, X7</span></p>
+<p class="p11"><span class="s1">##<span class="Apple-converted-space"> </span></span></p>
+<p class="p11"><span class="s1">## </span><span class="s4">ℹ</span><span class="s1"> Use `spec()` to retrieve the full column specification for this data.</span></p>
+<p class="p11"><span class="s1">## </span><span class="s4">ℹ</span><span class="s1"> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></p>
+<p class="p8"><span class="s1">colnames(ListerOnly_links) &lt;- c("from", "to", "query_length", "subject_length", "align_length", "evalue", "pident")</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1"># we want to filter dataframe for alignments that cover a large proportion of the original sequence, add this to the results</span></p>
+<p class="p8"><span class="s1">ListerOnly_links &lt;- ListerOnly_links %&gt;% mutate(cov = align_length / query_length)</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1"># stringent evalue and alignment coverage &gt; 80%</span></p>
+<p class="p8"><span class="s1">ListerOnly_cutoff1 &lt;- net_analyze(ListerOnly_links, 1e-20, 0.8)</span></p>
+<p class="p8"><span class="s1">ListerOnly_cutoff1 %&gt;% filter(grepl("Antat", VSG))</span></p>
+<p class="p11"><span class="s1">## # A tibble: 1 × 4</span></p>
+<p class="p11"><span class="s1">## <span class="Apple-converted-space">  </span>VSG<span class="Apple-converted-space">              </span>cluster degree <span class="Apple-converted-space">    </span>n</span></p>
+<p class="p11"><span class="s1">## <span class="Apple-converted-space">  </span>&lt;chr&gt;<span class="Apple-converted-space">            </span>&lt;chr&gt;<span class="Apple-converted-space">    </span>&lt;dbl&gt; &lt;int&gt;</span></p>
+<p class="p11"><span class="s1">## 1 Tbb1125VSG-Antat 31 <span class="Apple-converted-space">          </span>4 <span class="Apple-converted-space">    </span>6</span></p>
+<p class="p8"><span class="s1">ListerOnly_cutoff1 %&gt;% filter(cluster == "31")</span></p>
+<p class="p11"><span class="s1">## # A tibble: 6 × 4</span></p>
+<p class="p11"><span class="s1">## <span class="Apple-converted-space">  </span>VSG<span class="Apple-converted-space">                        </span>cluster degree <span class="Apple-converted-space">    </span>n</span></p>
+<p class="p11"><span class="s1">## <span class="Apple-converted-space">  </span>&lt;chr&gt;<span class="Apple-converted-space">                      </span>&lt;chr&gt;<span class="Apple-converted-space">    </span>&lt;dbl&gt; &lt;int&gt;</span></p>
+<p class="p11"><span class="s1">## 1 Tb427_000032900<span class="Apple-converted-space">            </span>31 <span class="Apple-converted-space">          </span>3 <span class="Apple-converted-space">    </span>6</span></p>
+<p class="p11"><span class="s1">## 2 Tb427_000143700<span class="Apple-converted-space">            </span>31 <span class="Apple-converted-space">          </span>5 <span class="Apple-converted-space">    </span>6</span></p>
+<p class="p11"><span class="s1">## 3 Tb427_000362300:pseudogene 31 <span class="Apple-converted-space">          </span>5 <span class="Apple-converted-space">    </span>6</span></p>
+<p class="p11"><span class="s1">## 4 Tb427_000787800:pseudogene 31 <span class="Apple-converted-space">          </span>5 <span class="Apple-converted-space">    </span>6</span></p>
+<p class="p11"><span class="s1">## 5 Tb427_000236600:pseudogene 31 <span class="Apple-converted-space">          </span>4 <span class="Apple-converted-space">    </span>6</span></p>
+<p class="p11"><span class="s1">## 6 Tbb1125VSG-Antat <span class="Apple-converted-space">          </span>31 <span class="Apple-converted-space">          </span>4 <span class="Apple-converted-space">    </span>6</span></p>
+<p class="p8"><span class="s1"># the proportion of unique VSG that were not grouped into a family</span></p>
+<p class="p8"><span class="s1">ListerOnly_cutoff1 %&gt;% filter(cluster == "unique") %&gt;% nrow() / nrow(ListerOnly_cutoff1)</span></p>
+<p class="p11"><span class="s1">## [1] 0.1660491</span></p>
+<p class="p8"><span class="s1"># how many families are there?</span></p>
+<p class="p8"><span class="s1">unique(ListerOnly_cutoff1$cluster) %&gt;% tail()</span></p>
+<p class="p11"><span class="s1">## [1] "934"<span class="Apple-converted-space">    </span>"935"<span class="Apple-converted-space">    </span>"936"<span class="Apple-converted-space">    </span>"937"<span class="Apple-converted-space">    </span>"938"<span class="Apple-converted-space">    </span>"unique"</span></p>
+<p class="p8"><span class="s1"># There are 938 VSG families in this Lister repertoire</span></p>
+<p class="p9"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1"># range of family sizes</span></p>
+<p class="p8"><span class="s1">summary(ListerOnly_cutoff1[ListerOnly_cutoff1$cluster != "unique", ] %&gt;% select(cluster, n) %&gt;% distinct() %&gt;% .$n)</span></p>
+<p class="p11"><span class="s1">##<span class="Apple-converted-space">    </span>Min. 1st Qu.<span class="Apple-converted-space">  </span>Median<span class="Apple-converted-space">    </span>Mean 3rd Qu.<span class="Apple-converted-space">    </span>Max.<span class="Apple-converted-space"> </span></span></p>
+<p class="p11"><span class="s1">## <span class="Apple-converted-space">  </span>2.000 <span class="Apple-converted-space">  </span>2.000 <span class="Apple-converted-space">  </span>3.000 <span class="Apple-converted-space">  </span>5.028 <span class="Apple-converted-space">  </span>5.000 182.000</span></p>
+<p class="p8"><span class="s1"># write clustering output to a csv file</span></p>
+<p class="p8"><span class="s1">#write_csv(ListerOnly_cutoff1, file = "ListerOnly_families.csv")</span></p>
+<p class="p5"><span class="s1">This fasta file contains far fewer sequences than the other Lister VSGenome. The Antat family members that are missing from this classification are missing from the fasta file, so nothing to worry about. The proportion of unique VSG for this VSGenome is 16%.</span></p>
+<p class="p6"><span class="s1"> </span></p>
+<p class="p13"><span class="s1"></span><br></p>
+<p class="p14"><span class="s5">By <a href="https://github.com/JSoSci/"><span class="s6">Jaime So</span></a> for the <a href="https://www.mugnierlab.org/"><span class="s6">Mugnier Lab</span></a></span></p>
+<p class="p15"><span class="s1">jso4@jhmi.edu</span></p>
+<p class="p16"><span class="s1"></span><br></p>
+<p class="p6"><span class="s1"> </span></p>
+</body>
+</html>
