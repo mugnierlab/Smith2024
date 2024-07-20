@@ -3,7 +3,7 @@
 # Smith 2024
 
 VSG_group_counts <- tibble(c("EATRO", "EATRO", "EATRO", "Lister", "Lister", "Lister"), c("Family", "Unique","Duplicate", "Family", "Unique", "Duplicate"),
-                           c(5350-659, 659, 0, 6244-840-12, 840-12, 12), .name_repair = ~ c("cell_line", "type", "count"))
+                           c(5268-1001, 1001, 0, 5667-941-5, 941-5, 5), .name_repair = ~ c("cell_line", "type", "count"))
 VSG_group_counts <- VSG_group_counts %>%
   qPCRr::reorder_samples("type", c("Unique", "Duplicate", "Family"))
 
