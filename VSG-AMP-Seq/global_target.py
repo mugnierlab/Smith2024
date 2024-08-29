@@ -39,4 +39,4 @@ alt_splicing = {"splice_one":"AACGCTATTATTAGAACAGTTTCTGTACTATATTGAAGCCAAAGAGGGAG
 protein_start = 86
 table = str.maketrans('', '', string.ascii_lowercase)
 
-primer_dict, primer_seq_dict = aux_functions.read_in_primers("JAC20-8-primers.txt")
+primer_dict, primer_seq_dict = aux_functions.read_in_primers("antat_primers.txt")
