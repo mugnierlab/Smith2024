@@ -136,7 +136,7 @@ def spacer_trim(primer_dictionary):
 def main():
     """Execute the functions"""
 
-    primer_dict, prime_seq = aux_functions.read_in_primers("antat_primer.txt")
+    primer_dict, prime_seq = aux_functions.read_in_primers("antat_primers.txt")
     trim("./sorted_reads/", primer_dict)
     spacer_trim(primer_dict)
 
