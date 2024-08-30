@@ -96,7 +96,7 @@ def demultiplex(barcode_dict, error):
         with open(trimm_file, "r") as seq_file1, open(r2_trimm_file, "r") as seq_file2:
             # keys = barcodes from barcode_dict, values = empty list, for reads tuples
             multiplex_counts = {key: 0 for key in barcode_dict}
-            primer = trimm_file.split("/")[2].split("_")[0]
+            primer = trimm_file.split("/")[2].split("_")[1]
             barcode_positions = {}
             output_files = []
             counter = 0
