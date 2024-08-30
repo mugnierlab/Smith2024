@@ -40,3 +40,7 @@ protein_start = 86
 table = str.maketrans('', '', string.ascii_lowercase)
 
 primer_dict, primer_seq_dict = aux_functions.read_in_primers("antat_primers.txt")
+
+rev_primer_dict = {}
+for entry in primer_dict:
+    rev_primer_dict[primer_dict[entry]] = entry
