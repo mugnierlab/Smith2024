@@ -8,7 +8,7 @@ import shutil
 import aux_functions
 
 
-def trim(folder_name, primer_dict):
+def trim(folder_name, primer_dict, VSG_name):
     """
     Trimming reads
 
@@ -53,11 +53,11 @@ def trim(folder_name, primer_dict):
 
     for primer_name in primer_dict.values():
         # output file name
-        output_name = "--basename " + primer_name + " "
+        output_name = "--basename " + VSG_name + "_" + primer_name + " "
 
         # input files
-        input_reads = folder_name + primer_name + "_read1.fq " + \
-                      folder_name + primer_name + "_read2.fq"
+        input_reads = folder_name + VSG_name + "_" + primer_name + "_read1.fq " + \
+                      folder_name + VSG_name + "_" + primer_name + "_read2.fq"
 
         # trim_galore command
         trim_command = "trim_galore " + trim_flags + adapters + output_name + input_reads
@@ -75,7 +75,7 @@ def trim(folder_name, primer_dict):
         shutil.move(txt_file, "./trimmed_reads/")
 
 
-def spacer_trim(primer_dictionary):
+def spacer_trim(primer_dictionary, VSG_name):
     """Spacer Trim
 
     Trims spacers from 3' end read1
@@ -116,8 +116,8 @@ def spacer_trim(primer_dictionary):
     for trimmed_file in glob.glob(folder + "*_1.fq"):
         print("File: " + trimmed_file)
         primer = trimmed_file.strip().split("/")[2].split("_")[0]
-        seq_file_1 = folder + primer + "_val_1.fq"
-        seq_file_2 = folder + primer + "_val_2.fq"
+        seq_file_1 = folder + VSG_name + "_" + primer + "_R1_val_1.fq"
+        seq_file_2 = folder + VSG_name + "_" + primer + "_R2_val_2.fq"
         input_files = seq_file_1 + " " + seq_file_2
         sequence = aux_functions.rev_complement(primers[primer])
 
@@ -125,20 +125,20 @@ def spacer_trim(primer_dictionary):
         # search for sequence on 5' end of read2
         # lowercase letter for read1, a for 3' end of read
         adapter_command = "-a " + sequence + " "
-        output_read_1 = "-o " + folder_sorted + primer + "_val_1.fq "
-        output_read_2 = "-p " + folder_sorted + primer + "_val_2.fq "
+        output_read_1 = "-o " + folder_sorted + VSG_name + "_" + primer + "_val_1.fq "
+        output_read_2 = "-p " + folder_sorted + VSG_name + "_" + primer + "_val_2.fq "
         cut_command = "cutadapt " + adapter_command + cut_flags + output_read_1 + \
                       output_read_2 + input_files
 
-        os.system(cut_command + " > cutadapt/cutadapt_output_seq1_" + primer + ".txt")
+        os.system(cut_command + " > cutadapt/cutadapt_output_seq1_" + VSG_name + "_" + primer + ".txt")
 
 
 def main():
     """Execute the functions"""
 
     primer_dict, prime_seq = aux_functions.read_in_primers("antat_primers.txt")
-    trim("./sorted_reads/", primer_dict)
-    spacer_trim(primer_dict)
+    trim("./sorted_reads/", primer_dict, "AnTat")
+    spacer_trim(primer_dict, "AnTat")
 
 
 if __name__ == '__main__':
