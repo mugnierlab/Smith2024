@@ -115,7 +115,7 @@ def spacer_trim(primer_dictionary, VSG_name):
     # loop through all primers in dictionary and use as adapters for cutadapt
     for trimmed_file in glob.glob(folder + "*_1.fq"):
         print("File: " + trimmed_file)
-        primer = trimmed_file.strip().split("/")[2].split("_")[0]
+        primer = trimmed_file.strip().split("/")[2].split("_")[1]
         seq_file_1 = folder + VSG_name + "_" + primer + "_R1_val_1.fq"
         seq_file_2 = folder + VSG_name + "_" + primer + "_R2_val_2.fq"
         input_files = seq_file_1 + " " + seq_file_2
