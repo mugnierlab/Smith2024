@@ -1,4 +1,6 @@
-"""AMP Seq: This module creates mosaic consensus sequences from overlapping reads."""
+"""AMP Seq: This module creates mosaic consensus sequences from overlapping reads.
+   Smith 2024
+   Author: Jaclyn Smith """
 from Bio.SeqIO.QualityIO import FastqGeneralIterator
 import aux_functions
 import Levenshtein as lev
