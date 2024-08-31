@@ -1,6 +1,6 @@
 """AMP Seq: This module creates mosaic consensus sequences from overlapping reads."""
 from Bio.SeqIO.QualityIO import FastqGeneralIterator
-import sort_reads_by_primer
+import primer_sort
 import Levenshtein as lev
 import regex
 import glob
@@ -341,7 +341,7 @@ def unknown_overlap(seq1, seq2, qual1, qual2, primer):
 
 def consensus_builder():
     # get target primer ranges
-    primer_dict, primer_seq_dict = sort_reads_by_primer.read_in_primers("JAC20-8-primers.txt")
+    primer_dict, primer_seq_dict = primer_sort.read_in_primers("antat_primers.txt")
     target_ranges = target_primer_id(primer_dict)
 
     # output variable initialization
