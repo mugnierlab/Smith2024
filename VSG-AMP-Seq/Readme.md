@@ -1,10 +1,10 @@
 VSG-AMP-Seq Pipeline
 Author: Jaclyn Smith
 
-Install Instructions
-Tested on: MacOS, MacOS with M1 Chip & Linux
-Install time: 15 minutes
-Create anaconda environment and install following packages:
+Install Instructions\
+Tested on: MacOS, MacOS with M1 Chip & Linux\
+Install time: 15 minutes\
+Create anaconda environment and install following packages:\
 
 ```
   conda config --add subdirs osx-64 # needed for M1 chip
