@@ -505,10 +505,12 @@ def alt_splicing_remover(un_anch_seq, alt_splice_counts):
     return alt_found, alt_splice_counts
 
 
-def vsg_align():
+def vsg_align(source_folder):
     """
     Aligns all reads to the target VSG to identify mosaic hybrid reads.
     All results are written to files.
+    Args:
+        source_folder: a string, the folder location for the reads to run this. 
     """
 
     vsg_seqs_by_primer = {}
@@ -608,7 +610,8 @@ def vsg_align():
     pbar = ProgressBar()
 
     #for consol_read in pbar(glob.glob("./consol_reads/C*_1.fq")):
-    for consol_read in pbar(glob.glob("./demultiplexed_reads/*_1.fq")):
+    for consol_read in pbar(glob.glob("./" + source_folder + "/*_1.fq")):
+    #for consol_read in pbar(glob.glob("./demultiplexed_reads/*_1.fq")):
 
         read1 = consol_read
         read2 = consol_read.split("_1.fq")[0] + "_2.fq"
@@ -908,7 +911,7 @@ def vsg_align():
 
 def main():
     """Execute the functions"""
-    vsg_align()
+    vsg_align("demultiplexed_reads")
 
 
 if __name__ == '__main__':
