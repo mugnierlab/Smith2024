@@ -40,3 +40,43 @@ To run:
     quant_R1s_bowtie.py - update the positions of the guides based within the full length target. 0 based
   
   Edit the main() within each module to update for the specific input files
+
+  Index_addition:
+    index_add("<R1_file>", "<R2_file>",
+              "<I1_file>", "<I2_file>", "NovaSeq" or "MiSeq")
+  primer_sort:
+    sort_sequences("expt_code", "target_primers.fasta", "./index_reads/index_R1.fastq", "./index_reads/index_R2.fastq")
+
+  trim:
+    primer_dict, prime_seq = aux_functions.read_in_primers("target_primers.txt")
+    trim("./sorted_reads/", primer_dict, <Target>) # Target is a String like "AnTat"
+    spacer_trim(primer_dict, <Target>)
+
+  demultiplex:
+    bc = barcodes("expt_barcodes.txt")
+    allowed_error = barcode_errors(bc)
+    demultiplex(bc, allowed_error)
+
+  consol_reads:
+    # note files in the demulitplexed_reads folder must be gzipped!
+
+  vsg_align:
+    vsg_align(<source folder>) # must have unzipped files; "demultiplexed_reads" or "consol_reads"
+
+  define_read_consensus:
+    no changes
+
+  identify_mosaics:
+    mosaic_find("target_primers.txt")
+
+  run mosaic_graphing_functions:
+    get_all_CO_events(file_name, day_order, genotype_order, mouse_order, primer_order)
+      file_name = string - path to file
+      day_order = vector with names of second experimental attribute
+      genotype_order = vector with names of third experimental attribute
+      mouse_order = vector with names of first experimental attribute
+      # note if there are any missing samples, these need to also be absent from the vectors
+      primer_order = vector with names of the primers
+    graph_all_events(single_events) # this is the output of get_all_CO_events, many options are toggleable
+    All settings for each figure are in Figures section.
+
