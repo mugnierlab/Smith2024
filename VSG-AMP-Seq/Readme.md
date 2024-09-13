@@ -79,9 +79,9 @@ To run:\
       genotype_order = vector with names of third experimental attribute\
       mouse_order = vector with names of first experimental attribute\
       primer_order = vector with names of the primers\
-      # note if there are any missing samples, these need to also be absent from the vectors\
+      # note if there are any missing samples, these need to also be absent from the vectors
 
   \
     graph_all_events(single_events) # this is the output of get_all_CO_events, many options are toggleable\
-    All settings for each figure are in Figures section.\
+    All settings for each figure are in Figures section.
 
