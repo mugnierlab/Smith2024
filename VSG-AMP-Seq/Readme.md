@@ -4,7 +4,7 @@ Author: Jaclyn Smith
 Install Instructions\
 Tested on: MacOS, MacOS with M1 Chip & Linux\
 Install time: 15 minutes\
-Create anaconda environment and install following packages:\
+Create anaconda environment and install following packages:
 
 ```
   conda config --add subdirs osx-64 # needed for M1 chip
@@ -21,23 +21,23 @@ Create anaconda environment and install following packages:\
   conda install bioconda::bowtie #1.3.1
 ```
 
-To run:
-  Required files:
-    global_target.py - this file must be updated for the specific target in question:
-      full_length_target - a string with the full sequence from the splice leader to the 14-mer
-      alt_splicing - a dictionary, the observed alt splice events and/or errors detected near the
-          splice leader with full length sequences as the values. This is required for speeding up
-          the pipeline
-      protein_start - an int, the start position of the protein coding sequence. 0 based
-      antat_primers.txt - the name of the .txt file with primers and sequences
-    target.fasta - a FASTA with the full length sequence of the target from splice leader to 14mer
-    target_primers.txt - a tsv format file with primer#, primer sequence, and the predicted sequence of the anchored read
-    target_primers.fasta - a FASTA with primer names and the sequence names and the primers as the sequence
-              These names are used for the output files and should include the target_primer#
-    expt_barcodes.txt - a tsv format file with expt name - must be a 3 part name with experimental
-              conditions separated by underscores
-              examples Mouse_day_genotype, or cell-line_drug_target-cut-site
-    quant_R1s_bowtie.py - update the positions of the guides based within the full length target. 0 based
+To run:\
+  Required files:\
+    global_target.py - this file must be updated for the specific target in question:\
+      full_length_target - a string with the full sequence from the splice leader to the 14-mer\
+      alt_splicing - a dictionary, the observed alt splice events and/or errors detected near the\
+          splice leader with full length sequences as the values. This is required for speeding up\
+          the pipeline\
+      protein_start - an int, the start position of the protein coding sequence. 0 based\
+      antat_primers.txt - the name of the .txt file with primers and sequences\
+    target.fasta - a FASTA with the full length sequence of the target from splice leader to 14mer\
+    target_primers.txt - a tsv format file with primer#, primer sequence, and the predicted sequence of the anchored read\
+    target_primers.fasta - a FASTA with primer names and the sequence names and the primers as the sequence\
+              These names are used for the output files and should include the target_primer#\
+    expt_barcodes.txt - a tsv format file with expt name - must be a 3 part name with experimental\
+              conditions separated by underscores\
+              examples Mouse_day_genotype, or cell-line_drug_target-cut-site\
+    quant_R1s_bowtie.py - update the positions of the guides based within the full length target. 0 based\
   
   Edit the main() within each module to update for the specific input files
 
