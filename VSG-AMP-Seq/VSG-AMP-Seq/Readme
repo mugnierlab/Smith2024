@@ -1,0 +1,24 @@
+VSG-AMP-Seq Pipeline
+Author: Jaclyn Smith
+
+Install Instructions
+Tested on: MacOS, MacOS with M1 Chip & Linux
+Install time: 15 minutes
+Create anaconda environment and install following packages:
+  conda config --add subdirs osx-64 # needed for M1 chip
+  conda install anaconda::python # 3.8.19
+  conda install anaconda::biopython # 1.78
+  conda config --add channels bioconda
+  conda config --add channels conda-forge
+  conda install bioconda::cutadapt (check this must be 3.2>) # 3.5
+  conda install bioconda::trim-galore # v0.6.4
+  conda install anaconda::pandas #1.2.1
+  conda install conda-forge::python-levenshtein #0.25.1
+  pip install progressbar # OR conda install conda-forge::progressbar #2.5
+  conda install -c conda-forge regex #2.5.82
+  conda install bioconda::bowtie #1.3.1
+
+To run:
+  Required files:
+    global_target.py - this file must be updated with the 
+  Edit the main() within 
