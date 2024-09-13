@@ -72,6 +72,7 @@ To run:\
     mosaic_find("target_primers.txt")\
 \
   run mosaic_graphing_functions:\
+  \
     get_all_CO_events(file_name, day_order, genotype_order, mouse_order, primer_order)\
       file_name = string - path to file\
       day_order = vector with names of second experimental attribute\
@@ -79,6 +80,7 @@ To run:\
       mouse_order = vector with names of first experimental attribute\
       # note if there are any missing samples, these need to also be absent from the vectors\
       primer_order = vector with names of the primers\
+  \
     graph_all_events(single_events) # this is the output of get_all_CO_events, many options are toggleable\
     All settings for each figure are in Figures section.\
 
