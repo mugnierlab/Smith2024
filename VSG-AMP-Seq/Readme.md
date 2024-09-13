@@ -6,6 +6,7 @@ Tested on: MacOS, MacOS with M1 Chip & Linux
 Install time: 15 minutes
 Create anaconda environment and install following packages:
 
+```
   conda config --add subdirs osx-64 # needed for M1 chip
   conda install anaconda::python # 3.8.19
   conda install anaconda::biopython # 1.78
@@ -18,6 +19,7 @@ Create anaconda environment and install following packages:
   pip install progressbar # OR conda install conda-forge::progressbar #2.5
   conda install -c conda-forge regex #2.5.82
   conda install bioconda::bowtie #1.3.1
+```
 
 To run:
   Required files:
