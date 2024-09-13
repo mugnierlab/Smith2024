@@ -55,6 +55,8 @@ def sam_location():
                     pass
                 elif line.startswith("Reported"):
                     pass
+                elif line.startswith("Setting"):
+                    pass
                 else:
                     len_read = len(line.split("\t")[9])
                     if start_range <= int(line.split("\t")[3]) <= end_range:
