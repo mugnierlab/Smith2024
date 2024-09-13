@@ -5,6 +5,8 @@ Install Instructions
 Tested on: MacOS, MacOS with M1 Chip & Linux
 Install time: 15 minutes
 Create anaconda environment and install following packages:
+
+```
   conda config --add subdirs osx-64 # needed for M1 chip
   conda install anaconda::python # 3.8.19
   conda install anaconda::biopython # 1.78
@@ -17,6 +19,7 @@ Create anaconda environment and install following packages:
   pip install progressbar # OR conda install conda-forge::progressbar #2.5
   conda install -c conda-forge regex #2.5.82
   conda install bioconda::bowtie #1.3.1
+```
 
 To run:
   Required files:
@@ -34,5 +37,6 @@ To run:
     expt_barcodes.txt - a tsv format file with expt name - must be a 3 part name with experimental
               conditions separated by underscores
               examples Mouse_day_genotype, or cell-line_drug_target-cut-site
+    quant_R1s_bowtie.py - update the positions of the guides based within the full length target. 0 based
   
   Edit the main() within each module to update for the specific input files
