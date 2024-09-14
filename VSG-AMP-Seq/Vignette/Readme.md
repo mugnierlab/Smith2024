@@ -5,6 +5,6 @@ To run: follow the readme within the VSG-AMP-Seq file and create the conda envir
 Within the folder containing all the .py files from the github repo VSG-AMP-Seq, and the auxillary files included here, run the run_pipeline.py file in the conda environment
 
 ```
-
+run_pipeline.py
 ```
 here we go
