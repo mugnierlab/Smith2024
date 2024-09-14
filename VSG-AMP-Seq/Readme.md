@@ -42,7 +42,7 @@ To run:\
   \
   Edit the main() within each module to update for the specific input files
 
-  The amount of time it takes to run these scripts depends on the data size, the number of mosaics within the sample, and the number of donor VSGs to check. As each of these increases, the length of the run also increases. To shorten the run time, the number of donor VSGs can be limited, reads can undergo consolidation, and samples can be parallelized. The pipeline has been optimized to run even large datasets off the NovaSeq6000 and should take less than a day to obtain demultiplexed files.
+  The amount of time it takes to run these scripts depends on the data size, the number of mosaics within the sample, and the number of donor VSGs to check. As each of these increases, the length of the run also increases. To shorten the run time, the number of donor VSGs can be limited, reads can undergo consolidation, and samples can be parallelized. The pipeline has been optimized to run even large datasets off the NovaSeq6000 and should take less than a day to obtain demultiplexed files on a basic Mac laptop.
   I recommend using tmux or screen to set up a number of parallel instances of VSG_align. They can run without interfering with each other. If a file is running very slowly - there may be a way to filter out common unknown reads without testing against each potential donor VSG.
 
   genome_sort_by_primer:\
