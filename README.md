@@ -1,5 +1,6 @@
 # Smith2024
-identifying mosaic VSGs
+identifying mosaic VSGs\
+please email jaclynsmith380@gmail.com and mmugnie1@jhu.edu with any questions
 
 VSG-AMP-Seq: A detailed Readme can be found within the VSG-AMP-Seq Folder. A vignette is included.
 
