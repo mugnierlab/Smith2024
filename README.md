@@ -20,7 +20,7 @@ genomic_sketch_R: the functions used to plot the genome in R. \
 libraries required: tidyverse
 
 tissue_ORF_analysis: the python script used to quickly identify ORFs from Beaver et al. 2024 which were AnTat1.1 mosaics\
-requires bowtie() \
+requires bowtie(1.2.3) \
 The output of this analysis is formatted for R functions from VSG-AMP-Seq. Unknown mosaic VSGs with an identified portion matching AnTat1.1 were parsed by hand.
 
 all_Lister_cut_clones.fastq - a FASTQ file with all the full length VSG sequences from the individually isolated clones after guide induction in Lister427 cells targeting VSG-2.
