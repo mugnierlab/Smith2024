@@ -14,3 +14,4 @@ Then run the associated file:
 ```
   make_graphs.R
 ```
+Expected output files, among many other pipeline outputs, can be found in the out_files folder.
