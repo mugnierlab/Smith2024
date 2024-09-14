@@ -68,7 +68,7 @@ To run:\
             if error because too many files are open, run in terminal:
             ```
             ulimit -n <num of files to open> 
-            ```
+            ```\
 \
   consol_reads:\
     # note files in the demulitplexed_reads folder must be gzipped!\
