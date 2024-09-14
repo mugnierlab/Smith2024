@@ -1,7 +1,9 @@
 # Smith2024
 mosaic-vsg-scripts
 
-VSG-AMP-Seq:
+VSG-AMP-Seq: A detailed Readme found within the VSG-AMP-Seq Folder. A vignette is included.
+
+
 
 1) Raw FASTQ processing
 packages required:
