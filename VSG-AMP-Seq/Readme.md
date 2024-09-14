@@ -79,7 +79,7 @@ To run:\
     mosaic_find("target_primers.txt")\
 \
   run mosaic_graphing_functions:\
-  To run, must load libraries: devtools, tidyverse
+  To run, must load libraries: devtools, tidyverse\
   run command:
   ```
 install_github("JaclynSmith/qPCRr")
