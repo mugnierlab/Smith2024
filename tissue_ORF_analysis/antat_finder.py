@@ -1,5 +1,5 @@
 """
-From Beaver et al find the AnTat1.1 like ORFs
+From Beaver et al. find the AnTat1.1 like ORFs
 Smith 2024
 Author: Jaclyn Smith
 """
