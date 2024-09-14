@@ -79,6 +79,12 @@ To run:\
     mosaic_find("target_primers.txt")\
 \
   run mosaic_graphing_functions:\
+  To run, must load libraries: devtools, tidyverse
+  run command:
+  ```
+install_github("JaclynSmith/qPCRr")
+```
+load library qPCRr 
   \
     get_all_CO_events(file_name, day_order, genotype_order, mouse_order, primer_order)\
       file_name = string - path to file\
