@@ -70,7 +70,7 @@ To run:\
     # note files in the demulitplexed_reads folder must be gzipped!\
 \
   vsg_align:\
-    vsg_align(<source folder>) # must have unzipped files; "demultiplexed_reads" or "consol_reads"\
+    vsg_align(<source_folder>) # must have unzipped files; "demultiplexed_reads" or "consol_reads"\
 \
   define_read_consensus:\
     no changes\
