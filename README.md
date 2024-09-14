@@ -1,7 +1,7 @@
 # Smith2024
 mosaic-vsg-scripts
 
-VSG-AMP-Seq: A detailed Readme found within the VSG-AMP-Seq Folder. A vignette is included.
+VSG-AMP-Seq: A detailed Readme can be found within the VSG-AMP-Seq Folder. A vignette is included.
 
 
 
