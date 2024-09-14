@@ -574,7 +574,7 @@ def read_in_consensus(file_name):
     return sequences
 
 
-def mosaic_find(primer_file):
+def mosaic_find(primer_file, donor_VSG_file):
     """
     run through the consensus sequences and solo R1s to identify the recombination sites between
     the target and the donors. If multiple donors were possible, all donors are tested. If one turns
@@ -582,12 +582,13 @@ def mosaic_find(primer_file):
     Args:
         primer_file: a string, the text file with the primers ending in .txt
             antat_primers.txt
+        donor_VSG_file: a string, path to the FASTA file containing the donor VSGs
 
     Returns:
 
     """
     # variable initialization
-    donor_VSGs = read_in_donorVSGs("EATRO1125_vsgs_long.fa")
+    donor_VSGs = read_in_donorVSGs(donor_VSG_file)
     primer_dict, primer_seq_dict = aux_functions.read_in_primers(primer_file)
     target_primer_range = target_primer_id(primer_dict)
     output = "double_crosses.csv"
@@ -760,7 +761,7 @@ def mosaic_find(primer_file):
 def main():
     """Execute the functions"""
 
-    mosaic_find("antat_primers.txt")
+    mosaic_find("antat_primers.txt", "EATRO1125_vsgs_long.fa")
 
 
 if __name__ == '__main__':
