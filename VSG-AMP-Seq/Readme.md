@@ -65,8 +65,10 @@ To run:\
     bc = barcodes("expt_barcodes.txt")\
     allowed_error = barcode_errors(bc)\
     demultiplex(bc, allowed_error)\
-            if error because too many files are open, run:
+            if error because too many files are open, run in terminal:
+            ```
             ulimit -n <num of files to open> 
+            ```
 \
   consol_reads:\
     # note files in the demulitplexed_reads folder must be gzipped!\
