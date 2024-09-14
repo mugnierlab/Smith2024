@@ -1,4 +1,4 @@
-VSG-AMP-Seq Pipeline
+VSG-AMP-Seq Pipeline\
 Author: Jaclyn Smith
 
 Install Instructions\
