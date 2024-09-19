@@ -64,6 +64,7 @@ def trim(folder_name, primer_dict, VSG_name):
 
         # run trim galore, send output to file in folder trim_galore
         print("TRIMMING")
+       # must remove &> if you are on linux and not mac!!
         os.system(trim_command + " &> trim_galore/trim_output_" + primer_name + ".txt")
 
     # move normal trim_galore report files to trim_galore folder
