@@ -57,7 +57,7 @@ To run:\
     sort_sequences("expt_code", "target_primers.fasta", "./index_reads/index_R1.fastq", "./index_reads/index_R2.fastq")\
 \
   trim:
-  * for this file you must remove &> if you are on linux and not mac!!!
+  * for this file you must remove &> if you are on linux and not mac!!!\
     primer_dict, prime_seq = aux_functions.read_in_primers("target_primers.txt")\
     trim("./sorted_reads/", primer_dict, <Target>) # Target is a String like "AnTat"\
     spacer_trim(primer_dict, <Target>)\
